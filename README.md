@@ -15,4 +15,4 @@
 
 ### Notable Dependencies:
 ##### Node.js MongoDB React Express Redux Material-UI googleMaps
-##### source code repository: http://www.github.com/kdk745/final-proj
+##### source code repository: http://www.github.com/kdk745/final-project
