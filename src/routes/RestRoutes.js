@@ -2,24 +2,19 @@ import express from 'express';
 import RestController from '../controllers/RestController';
 
 const router = express.Router();
-router.get('/restaurant', function (request, response, next) {
-  RestController.list(request, response, next);
-});
 
-router.get('/restaurant/:_id', function (request, response, next) {
-  RestController.show(request, response, next);
-});
+router.get('/restaurant', RestController.listRestaurants);
 
-router.delete('/restaurant/:_id', function (request, response, next) {
-  RestController.remove(request, response, next);
-});
+router.get('/restaurant/:_id', RestController.show);
 
-router.post('/restaurant', function (request, response, next) {
-  RestController.create(request, response, next);
-});
+router.delete('/restaurant/:_id', RestController.remove);
 
-router.put('/restaurant/:_id', function (request, response, next) {
-  RestController.update(request, response, next);
-});
+router.post('/restaurant', RestController.create);
+
+router.put('/restaurant/:_id', RestController.update);
+
+router.put('/guestList/:_id', RestController.addGuest);
+
+router.get('/guestList/:_id', RestController.listGuests);
 
 export default router;

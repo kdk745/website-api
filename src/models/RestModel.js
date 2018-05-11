@@ -1,17 +1,20 @@
 import mongoose from 'mongoose';
-
 const RestSchema = new mongoose.Schema({
-  credentials: {
+  name: {
     required: true,
-    type: Object
+    type: String
+  },
+  address: {
+    required: true,
+    type: String
   },
   info: {
-    required: true,
-    type: Object
+    required: false,
+    type: String
   },
-  booked: {
+  userID: {
     required: true,
-    type: Array
+    type: String
   }
 });
 
